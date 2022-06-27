@@ -4,7 +4,7 @@
   }
   
   .app__whitebg {
-    background-color: var(--white-color);
+    background-color: var(--light-color);
   }
   
   .app__primarybg {
@@ -48,6 +48,7 @@
     p {
       text-transform: uppercase;
       color: var(--black-color);
+      font-size: 1.2rem;
     }
   }
   
@@ -72,9 +73,9 @@
   }
   
   .p-text {
-    font-size: 0.8rem;
+    font-size: 1.4rem;
     text-align: left;
-    color: var(--gray-color);
+    color: var(--black-color);
     line-height: 1.5;
   
     @media screen and (min-width: 2000px) {
@@ -83,7 +84,7 @@
   }
   
   .bold-text {
-    font-size: 1rem;
+    font-size: 1.6rem;
     font-weight: 800;
     color: var(--black-color);
     text-align: left;
@@ -109,28 +110,35 @@
       width: 40px;
       height: 40px;
       border-radius: 50%;
-      background-color: var(--white-color);
+      background-color: var(--secondary-color);
       margin: 0.25rem 0;
       border: 1px solid var(--lightGray-color);
+
+      background-color: var(--accent2-color);
+      border-radius: 10px;    
+      border: solid 4px var(--black-color);
+      box-shadow: 4px 4px 0 var(--black-color);
   
       display: flex;
       justify-content: center;
       align-items: center;
+
+      
   
       transition: all 0.3s ease-in-out;
   
       svg {
         width: 15px;
         height: 15px;
-        color: var(--gray-color);
+        color: var(--secondary-color);
       }
   
       &:hover {
         background-color: var(--secondary-color);
-        border-color: var(--secondary-color);
+        
   
         svg {
-          color: var(--white-color);
+          color: var(--light-color);
         }
       }
   
@@ -176,7 +184,7 @@
     }
   }
   
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 564px) {
     .app__navigation,
     .app__social {
       display: none;
@@ -184,5 +192,9 @@
   
     .copyright {
       padding: 2rem;
+
+      .p-text{
+        font-size: 1rem;
+      }
     }
   }

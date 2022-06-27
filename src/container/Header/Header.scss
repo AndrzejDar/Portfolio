@@ -5,6 +5,7 @@
     background-repeat: repeat;
     background-position: center;
 
+
     
     .app__wrapper{
         padding: 0;
@@ -37,14 +38,15 @@
 }
 
 .app__header-info{
-    flex: 0.65;
+    flex: 1 ;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-content: flex-start;
     height: 100%;
 
-    margin: 0 2rem;
+
+    margin: 0;
 
     @media screen and (max-width: 2000px) {
         width: 100%;
@@ -59,20 +61,34 @@
     align-items: flex-end;
     flex-direction: column;
 
-    .badge-cmp, 
-    .tag-cmp{
-        padding: 1rem 2rem;
-        border: var(--white-color);
-        border-radius: 15px;
+    .badge-cmp{
+        padding: 1rem 1rem;
+        margin:10px;
         flex-direction: row;
         width: auto;
 
-        box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        background-color: var(--accent1-color);
+        border-radius: 10px;    
+        border: solid 4px var(--black-color);
+        box-shadow: 4px 4px 0 var(--black-color);
+
+        transform: rotate(1deg);
     }
 
     .tag-cmp{
+        padding: 1rem 1rem;
+        margin: 10px;
+
+        width: auto;
         flex-direction: column;
-        margin-top: 3rem;
+        margin-top: 1rem;
+
+        background-color: var(--accent2-color);
+        border-radius: 10px;    
+        border: solid 4px var(--black-color);
+        box-shadow: 4px 4px 0 var(--black-color);
+
+        transform: rotate(-2deg);
 
         p{
             width: 100%;
@@ -108,9 +124,14 @@
         width: 100px;
         height: 100px;
         border-radius: 50%;
+        
+        background-color: var(--accent1-color);
+        //border-radius: 10px;    
+        border: solid 4px var(--black-color);
+        box-shadow: 4px 4px 0 var(--black-color);
 
-        background: var(--white-color);
-        box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        background: var(--light-color);
+
 
         img{
             width: 60%;
@@ -121,19 +142,19 @@
 
 
     div:nth-child(1){
-        width: 100px;
-        height: 100px;
+        width: 120px;
+        height: 120px;
     }
 
     div:nth-child(2){
         margin: 1.75rem;
-        width: 150px;
-        height: 150px;
+        width: 160px;
+        height: 160px;
     }
 
     div:nth-child(3){
-        width: 70px;
-        height: 70px;
+        width: 130px;
+        height: 130px;
     }
 
     @media screen and (min-width:2000px) {
@@ -166,18 +187,20 @@
 }
 
 .app__header-img{
-    flex: 1;
+    flex: 2;
     height:100%;
 
     display: flex;
     justify-content: flex-end;
-    align-items: flex-end;
+    align-items:center;
     position: relative;
 
     img{
         width: 100%;
         object-fit: contain;
         z-index: 1;
+
+
     }
 
     .overlay_circle{

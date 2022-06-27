@@ -4,8 +4,8 @@
     justify-content: space-between;
     align-items: center;
 
-    padding: 1rem 2rem;
-    background: rgba(255,255,255,0.25);
+    padding: 0 2rem 0 2rem;
+    background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border: 1px solid (255,255,255,0.18);
@@ -30,6 +30,21 @@
     }
 }
 
+.app__navbar-name{
+    background: #000;
+    height: 100%;
+    padding: 1rem 2rem;
+     
+
+    p{
+        color: #fff;
+        text-decoration: underline;
+        text-transform: uppercase;
+        font-weight: 800;
+        font-size: 1.8rem;
+    }
+}
+
 .app__navbar-links{
     flex: 1;
     display: flex;
@@ -44,17 +59,8 @@
 
         flex-direction: column;
 
-        div{
-            width: 5px;
-            height: 5px;
-            background: transparent;
-            //border: 2px solid black;
-            border-radius: 50%;
-            margin-bottom: 5px;
-        }
-
         a{
-            color: var(--gray-color);
+            color: var(--black-color);
             text-decoration: none;
             flex-direction: column;
             text-transform: uppercase;
@@ -62,7 +68,9 @@
             transition: all 0.3s ease-in-out;
 
             &:hover{
-                color: var(--secondary-color);
+                color: var(--secondary-color);                
+                text-decoration: underline;
+                transition: all 0.5s ease-in-out;
             }
         }
 
@@ -73,15 +81,17 @@
         }
     }
 
-    @media  screen and (max-width: 900px) {
+    @media  screen and (max-width: 800px) {
         display: none;        
     }
 }
 
 .app__navbar-menu{
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;    
+    border: solid 4px var(--black-color);
+    box-shadow: 4px 4px 0 var(--black-color);
     position: relative;
 
     display: flex;
@@ -92,7 +102,12 @@
     svg{
         width: 70%;
         height: 70px;
-        color: var(--white-color);
+        color: var(--light-color);
+    }
+
+    &:hover{
+        transform: scale(1.1);
+        transition: all 0.5s ease-in-out;
     }
 
     div {
@@ -113,7 +128,7 @@
         flex-direction: column;
 
         background: url('../../assets/bgWhite.png');
-        background-color: var(--white-color);
+        background-color: var(--light-color);
         background-size: cover;
         background-repeat: repeat;
 
@@ -145,7 +160,7 @@
             a{
                 color: var(--gray-color);
                 text-decoration: none;
-                font-size:  1rem;
+                font-size:  1.4rem;
                 text-transform: uppercase;
                 font-weight: 500;
 
@@ -158,12 +173,12 @@
             }
         }
 
-        @media screen and (min-width: 900px){
+        @media screen and (min-width: 800px){
             display: none;
             
         }
     }
-    @media screen and (min-width: 900px){
+    @media screen and (min-width: 800px){
         display: none;
         
     }

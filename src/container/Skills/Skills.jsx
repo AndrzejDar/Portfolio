@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {motion} from 'framer-motion';
 import ReactTooltip from 'react-tooltip';
 
-import {AppWrap} from '../../wrapper';
+import {AppWrap, MotionWrap} from '../../wrapper';
 import {urlFor, client } from '../../client';
 
 import './Skills.scss';
@@ -20,7 +20,7 @@ function Skills() {
 
   return (
     <>
-      <h2 className='head-text'>skils exp</h2>
+      <h2 className='head-text'>My skills:</h2>
       <div className='app__skills-container'>
         <motion.div className="app__skills-list">
           {skills.map((skill)=>(
@@ -44,4 +44,8 @@ function Skills() {
   )
 }
 
-export default Skills
+export default AppWrap(
+  MotionWrap(Skills, 'app_skills'),
+  'skills',
+  'app__whitebg'
+  );
