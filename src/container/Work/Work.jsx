@@ -82,7 +82,6 @@ const Work = () => {
                 </a>
                 <a href={work.codeLink} target="_blank" rel="noreferrer">
                   <motion.div
-                    /*whileInView={{scale: [0,1]}}*/
                     whileHover={{ scale: [1, 0.9] }}
                     transition={{ duration: 0.25 }}
                     className="app__flex"
@@ -93,12 +92,14 @@ const Work = () => {
               </motion.div>
             </div>
             <div className="app__work-content app__flex">
-              <h4 className="bold-text">title</h4>
+              <h4 className="bold-text">{work.title}</h4>
               <p className="p-text" style={{ marginTop: 10 }}>
                 {work.description}
               </p>
               <div className="app__work-tag app__flex">
-                <p className="p-text">{work.tags}</p>
+                <p className="p-text">{
+                  work.tags.map((tag)=>(
+                    !tag.match(/all/i)?tag+' ':''))}</p>
               </div>
             </div>
           </div>
