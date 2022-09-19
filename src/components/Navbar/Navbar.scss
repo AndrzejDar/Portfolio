@@ -11,6 +11,8 @@
     border: 1px solid (255,255,255,0.18);
     position: fixed;
     z-index: 2;
+
+    
 }
 
 .app__navbar-logo{
@@ -99,6 +101,7 @@
     align-items: center;
     background: var(--secondary-color);
 
+
     svg{
         width: 70%;
         height: 70px;
@@ -106,8 +109,8 @@
     }
 
     &:hover{
-        transform: scale(1.1);
-        transition: all 0.5s ease-in-out;
+        /*transform: scale(1,1.1,1);*/
+        /*transition: all 0.5s ease-in-out;*/
     }
 
     div {
@@ -121,13 +124,18 @@
 
         width: 80%;
         height: 100vh;
+        
+        overflow-y: hidden;
+        overflow-x: hidden;
+        
+
 
         display: flex;
         justify-content: flex-end;
         align-items: flex-end;
         flex-direction: column;
 
-        background: url('../../assets/bgWhite.png');
+        background: url('../../assets/bgIMG.png');
         background-color: var(--light-color);
         background-size: cover;
         background-repeat: repeat;
@@ -164,14 +172,14 @@
                 text-transform: uppercase;
                 font-weight: 500;
 
-                transition: all 0.3s ease-in-out;
+                //transition: all 0.3s ease-in-out;
 
                 &:hover{
                     color: var(--secondary-color);
                 }
 
             }
-        }
+        } 
 
         @media screen and (min-width: 800px){
             display: none;

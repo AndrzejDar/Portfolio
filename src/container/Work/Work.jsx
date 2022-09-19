@@ -24,7 +24,6 @@ const Work = () => {
   const handleWorkFliter = (item) => {
     setActiveFilter(item);
     setAnimateCard([{ y: 100, opacity: 0 }]);
-
     setTimeout(() => {
       setAnimateCard([{ y: 0, opacity: 1 }]);
 
@@ -39,7 +38,7 @@ const Work = () => {
         My projects -<span> portfolio section</span>
       </h2>
       <div className="app__work-filter">
-        {["UI/UX", "Mobile", "ALL"].map((item, index) => (
+        {["React", "UI/UX", "ALL"].map((item, index) => (
           <div
             key={index}
             onClick={() => handleWorkFliter(item)}
@@ -63,13 +62,13 @@ const Work = () => {
               <img src={urlFor(work.imgUrl)} alt={work.name} />
 
               <motion.div
-                whileHover={{ opacity: [0, 1] }}
+                // whileHover={{ opacity: [0, 1] }}
                 transition={{
                   duration: 0.25,
                   ease: "easeInOut",
                   staggerChildren: 0.5,
                 }}
-                className="app__work-hover app__flex"
+                className="app__work-hover"
               >
                 <a href={work.projectLink} target="_blank" rel="noreferrer">
                   <motion.div

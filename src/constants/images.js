@@ -23,6 +23,10 @@ import about04 from '../assets/about04.png';
 import circle from '../assets/circle.svg';
 import avatar from '../assets/avatar.png';
 import avatarbg from '../assets/avatarbg.png';
+import avatarbg1 from '../assets/avatarbg_1.png';
+import avatarbg2 from '../assets/avatarbg_2.png';
+import avatarcircle01 from '../assets/avatarbg_circle01.png';
+import avatarcircle02 from '../assets/avatarbg_circle02.png';
 
 export default {
   email,
@@ -45,5 +49,9 @@ export default {
   about04,
   circle,
   avatar,
-  avatarbg
+  avatarbg,
+  avatarbg1,
+  avatarbg2,
+  avatarcircle01,
+  avatarcircle02,
 };
